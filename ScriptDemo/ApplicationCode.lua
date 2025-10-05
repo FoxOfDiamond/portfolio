@@ -19,7 +19,7 @@ iterations=15
 speed=1
 size=1
 killable=true
---This shit is horrible, I smooshed 3 scripts and modules together to produce this abomination to hit the 200 lines limit, I hope you're happy. Length: 380 lines without comments
+--Length: 380 lines without comments
 
 ----------------------------------------------------------------------Weirdly specific function that offsets an origin by a pitch, with the yaw decided----------------------------------------------------------------------
 ----------------------------------------------------------------------by the vector mag. Only used for rotating the leg segments up and down while maintaining their length and yaw----------------------------------------------------------------------
@@ -33,8 +33,8 @@ function rotateVector(vec,dir)
 	dir=math.rad(dir)
 	return Vector3.new(vec.X*math.cos(dir)-vec.Z*math.sin(dir),0,vec.X*math.sin(dir)+vec.Z*math.cos(dir))
 end
----------------------------------------------------------------------Used to be their own files. A quickly thrown together horror game mode where one player controls the spider to chase others----------------------------------------------------------------------
-----------------------------------------------------------------------along with a command to trigger a speed boost and play a jumpscare, and a few others for debugging and messing around(size, speed, toggle killing players)----------------------------------------------------------------------
+---------------------------------------------------------------------A quickly thrown together horror game mode where one player controls the spider to chase others----------------------------------------------------------------------
+----------------------------------------------------------------------along with a command to trigger a speed boost and play a jumpscare, and a few others for debugging and messing around(size, speed, resetting, toggle killing players)----------------------------------------------------------------------
 game.Players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(function(char)
 		local hum=char:FindFirstChildOfClass("Humanoid")
