@@ -1,0 +1,16 @@
+:root{
+    --text-color:#fff;
+    --foreground-color:#000000;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    margin:0;
+}
+header{
+    color: var(--text-color);
+    background: var(--foreground-color);
+}
+.logo{
+    font-weight: bolder;
+    font-size: xx-large;
+}
